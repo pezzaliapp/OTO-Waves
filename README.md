@@ -1,17 +1,20 @@
-# OTO Waves v3 PRO
+# OTO Waves v4 PRO
 
-Versione pulita e pubblicabile della PWA: meno “spaghetti”, più scena premium.
+PWA fullscreen WebGL per GitHub Pages / pezzaliapp.com.
 
-## Deploy GitHub Pages
+## Migliorie rispetto alla v3
+- niente scroll su mobile
+- scena fullscreen
+- shader WebGL
+- UI overlay pulita
+- meno colori, meno caos, look più premium
+- service worker offline
 
-Carica questi file nella root della repo e imposta:
+## Deploy
+Carica tutti i file nella root della repo o nella cartella `OTO-Waves/`.
 
-Settings → Pages → Deploy from branch → main / root
-
-## Percorso consigliato
-
-`https://www.alessandropezzali.it/OTO-Waves/`
+Percorso consigliato:
+https://www.alessandropezzali.it/OTO-Waves/
 
 ## Nota
-
-È una visualizzazione didattica/artistica, non un solver fisico professionale.
+Visualizzazione didattica e artistica, non solver elettromagnetico professionale.

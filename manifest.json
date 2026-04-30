@@ -1,12 +1,13 @@
 {
-  "name": "OTO Waves v3 \u2014 Dipole Radiation",
+  "name": "OTO Waves v4 PRO",
   "short_name": "OTO Waves",
-  "description": "Visual physics PWA by PezzaliAPP: electromagnetic dipole radiation.",
+  "description": "Visual Physics Engine by PezzaliAPP. WebGL dipole radiation PWA.",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
   "background_color": "#000000",
   "theme_color": "#000000",
+  "orientation": "any",
   "icons": [
     {
       "src": "icons/icon-192.png",

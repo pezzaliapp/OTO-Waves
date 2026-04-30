@@ -6,66 +6,53 @@
   <meta name="theme-color" content="#000000" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-  <title>OTO Waves v3 — Dipole Radiation</title>
+  <title>OTO Waves v4 PRO</title>
   <link rel="manifest" href="manifest.json" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="app">
-    <header class="topbar">
+  <canvas id="scene"></canvas>
+
+  <div class="ui">
+    <header>
       <div class="brand">OTO <span>by PezzaliAPP</span></div>
-      <div class="status"><span class="dot"></span> realtime field</div>
+      <button id="infoBtn" aria-label="Info">i</button>
     </header>
 
-    <section class="hero">
-      <p class="kicker">La matematica che si guarda</p>
-      <h1>Electromagnetic Waves</h1>
-      <p class="subtitle">Dipole Radiation Lab</p>
+    <section class="title">
+      <p>Visual Physics Engine</p>
+      <h1>Dipole Radiation</h1>
+      <span>Electromagnetic field propagation</span>
     </section>
 
-    <section class="formula">
-      <div><b class="cyan">E</b><span>∝ 1/r · cos(kr − ωt)</span></div>
-      <div><b class="gold">B</b><span>∝ 1/r · cos(kr − ωt)</span></div>
-      <div><b class="violet">S</b><span>= 1/μ₀ · (E × B)</span></div>
+    <section class="formula" id="formula">
+      <div><b>E</b><span>electric field</span></div>
+      <div><b>B</b><span>magnetic field</span></div>
+      <div><b>S</b><span>energy flow</span></div>
     </section>
 
-    <main class="stage">
-      <canvas id="canvas"></canvas>
-      <div class="dipole">
-        <div class="axis"></div>
-        <div class="charge positive"></div>
-        <div class="charge negative"></div>
-      </div>
-    </main>
-
-    <section class="panel">
-      <div>
-        <small>TIME</small>
-        <strong id="time">0.00</strong>
-      </div>
-      <div>
-        <small>FIELD</small>
-        <strong><span class="cyan">E</span> <span id="e">+0.00</span></strong>
-      </div>
-      <div>
-        <small>MAGNETIC</small>
-        <strong><span class="gold">B</span> <span id="b">+0.00</span></strong>
-      </div>
-      <div>
-        <small>ENERGY</small>
-        <strong><span class="violet">S</span> <span id="s">0.000</span></strong>
-      </div>
+    <section class="hud">
+      <div><small>t</small><strong id="tOut">0.00</strong></div>
+      <div><small>E</small><strong id="eOut">+0.00</strong></div>
+      <div><small>B</small><strong id="bOut">+0.00</strong></div>
+      <div><small>|S|</small><strong id="sOut">0.000</strong></div>
     </section>
 
     <section class="controls">
       <button id="play">Pausa</button>
       <button id="reset">Reset</button>
-      <label>Velocità <input id="speed" type="range" min="0.25" max="2" step="0.05" value="0.75"></label>
-      <label>Ampiezza <input id="amp" type="range" min="35" max="95" step="1" value="62"></label>
+      <label>Speed <input id="speed" type="range" min="0.25" max="1.8" step="0.05" value="0.75"></label>
+      <label>Energy <input id="power" type="range" min="0.35" max="1.3" step="0.05" value="0.8"></label>
     </section>
-
-    <footer>OTO Waves v3 PRO · visual physics PWA · offline ready</footer>
   </div>
+
+  <div class="info" id="info">
+    <button id="closeInfo">×</button>
+    <h2>OTO Waves v4 PRO</h2>
+    <p>Visualizzazione didattica: un dipolo oscillante genera campi elettromagnetici che si propagano nello spazio.</p>
+    <p><strong>E</strong> e <strong>B</strong> sono rappresentati come superfici luminose ortogonali. <strong>S</strong> indica il flusso di energia.</p>
+  </div>
+
   <script src="app.js"></script>
 </body>
 </html>
