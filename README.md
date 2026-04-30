@@ -1,20 +1,14 @@
-# OTO Waves v4 PRO
+# OTO Dipole Lab
 
-PWA fullscreen WebGL per GitHub Pages / pezzaliapp.com.
+Versione "laboratorio", non estetica social.
 
-## Migliorie rispetto alla v3
-- niente scroll su mobile
-- scena fullscreen
-- shader WebGL
-- UI overlay pulita
-- meno colori, meno caos, look più premium
-- service worker offline
+Caratteristiche:
+- layout tecnico
+- griglia e assi
+- lobi di radiazione sin²θ
+- campi Eθ e Bφ separati
+- vettori S radiali
+- controlli frequenza, ampiezza e campionamento
+- PWA offline
 
-## Deploy
-Carica tutti i file nella root della repo o nella cartella `OTO-Waves/`.
-
-Percorso consigliato:
-https://www.alessandropezzali.it/OTO-Waves/
-
-## Nota
-Visualizzazione didattica e artistica, non solver elettromagnetico professionale.
+Nota: è una visualizzazione didattica in approssimazione far-field, non un solver FDTD/FEM.

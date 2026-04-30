@@ -3,54 +3,62 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-  <meta name="theme-color" content="#000000" />
-  <meta name="apple-mobile-web-app-capable" content="yes" />
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-  <title>OTO Waves v4 PRO</title>
+  <meta name="theme-color" content="#0b0f14" />
+  <title>OTO Dipole Lab</title>
   <link rel="manifest" href="manifest.json" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <canvas id="scene"></canvas>
-
-  <div class="ui">
-    <header>
-      <div class="brand">OTO <span>by PezzaliAPP</span></div>
-      <button id="infoBtn" aria-label="Info">i</button>
+  <div class="app">
+    <header class="header">
+      <div>
+        <strong>OTO Dipole Lab</strong>
+        <span>Laboratory visualization · far-field approximation</span>
+      </div>
+      <button id="playBtn">Pause</button>
     </header>
 
-    <section class="title">
-      <p>Visual Physics Engine</p>
-      <h1>Dipole Radiation</h1>
-      <span>Electromagnetic field propagation</span>
-    </section>
+    <main class="layout">
+      <section class="viewport">
+        <canvas id="labCanvas"></canvas>
 
-    <section class="formula" id="formula">
-      <div><b>E</b><span>electric field</span></div>
-      <div><b>B</b><span>magnetic field</span></div>
-      <div><b>S</b><span>energy flow</span></div>
-    </section>
+        <div class="legend">
+          <div><i class="e"></i> Eθ electric field</div>
+          <div><i class="b"></i> Bφ magnetic field</div>
+          <div><i class="s"></i> S radial energy flux</div>
+        </div>
+      </section>
 
-    <section class="hud">
-      <div><small>t</small><strong id="tOut">0.00</strong></div>
-      <div><small>E</small><strong id="eOut">+0.00</strong></div>
-      <div><small>B</small><strong id="bOut">+0.00</strong></div>
-      <div><small>|S|</small><strong id="sOut">0.000</strong></div>
-    </section>
+      <aside class="side">
+        <section class="card">
+          <h2>Model</h2>
+          <p>Oscillating electric dipole. Radiation pattern proportional to sin²θ.</p>
+          <code>Eθ ∝ sinθ / r · cos(kr − ωt)</code>
+          <code>Bφ = Eθ / c</code>
+          <code>S ∝ Eθ²</code>
+        </section>
 
-    <section class="controls">
-      <button id="play">Pausa</button>
-      <button id="reset">Reset</button>
-      <label>Speed <input id="speed" type="range" min="0.25" max="1.8" step="0.05" value="0.75"></label>
-      <label>Energy <input id="power" type="range" min="0.35" max="1.3" step="0.05" value="0.8"></label>
-    </section>
-  </div>
+        <section class="card values">
+          <h2>Readout</h2>
+          <div><span>time</span><strong id="timeOut">0.00</strong></div>
+          <div><span>λ</span><strong id="lambdaOut">1.00</strong></div>
+          <div><span>ω</span><strong id="omegaOut">1.00</strong></div>
+          <div><span>|S|max</span><strong id="sOut">0.000</strong></div>
+        </section>
 
-  <div class="info" id="info">
-    <button id="closeInfo">×</button>
-    <h2>OTO Waves v4 PRO</h2>
-    <p>Visualizzazione didattica: un dipolo oscillante genera campi elettromagnetici che si propagano nello spazio.</p>
-    <p><strong>E</strong> e <strong>B</strong> sono rappresentati come superfici luminose ortogonali. <strong>S</strong> indica il flusso di energia.</p>
+        <section class="card controls">
+          <h2>Controls</h2>
+          <label>Frequency <input id="freq" type="range" min="0.5" max="2.5" step="0.05" value="1.00"></label>
+          <label>Amplitude <input id="amp" type="range" min="0.3" max="1.4" step="0.05" value="0.85"></label>
+          <label>Samples <input id="samples" type="range" min="4" max="14" step="1" value="9"></label>
+          <button id="resetBtn">Reset time</button>
+        </section>
+
+        <section class="note">
+          Didactic simulator. Not a FEM/FDTD electromagnetic solver.
+        </section>
+      </aside>
+    </main>
   </div>
 
   <script src="app.js"></script>

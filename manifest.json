@@ -1,13 +1,12 @@
 {
-  "name": "OTO Waves v4 PRO",
-  "short_name": "OTO Waves",
-  "description": "Visual Physics Engine by PezzaliAPP. WebGL dipole radiation PWA.",
+  "name": "OTO Dipole Lab",
+  "short_name": "Dipole Lab",
+  "description": "Laboratory-style dipole radiation visualization PWA.",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
-  "background_color": "#000000",
-  "theme_color": "#000000",
-  "orientation": "any",
+  "background_color": "#0b0f14",
+  "theme_color": "#0b0f14",
   "icons": [
     {
       "src": "icons/icon-192.png",
