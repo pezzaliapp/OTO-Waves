@@ -1,37 +1,17 @@
-# OTO Waves — Electromagnetic Lab
+# OTO Waves v3 PRO
 
-PWA statica pronta per GitHub Pages / pezzaliapp.com.
+Versione pulita e pubblicabile della PWA: meno “spaghetti”, più scena premium.
 
-Visualizza in modo scenografico la radiazione elettromagnetica di un dipolo:
-campo elettrico, campo magnetico e flusso di energia.
+## Deploy GitHub Pages
 
-## Branding
+Carica questi file nella root della repo e imposta:
 
-**OTO by PezzaliAPP**  
-Una nuova forma alle idee. Physics, code, visual thinking.
+Settings → Pages → Deploy from branch → main / root
 
-## Pubblicazione su GitHub Pages
+## Percorso consigliato
 
-1. Crea una repository, ad esempio `oto-waves`.
-2. Carica tutti i file contenuti nello zip nella root della repository.
-3. Vai in **Settings → Pages**.
-4. Source: **Deploy from a branch**.
-5. Branch: **main / root**.
-6. Apri il link generato da GitHub Pages.
+`https://www.alessandropezzali.it/OTO-Waves/`
 
-## Collegamento da pezzaliapp.com
+## Nota
 
-Puoi pubblicarla anche come sottocartella:
-
-`https://www.alessandropezzali.it/oto-waves/`
-
-oppure come link da una pagina OTO su PezzaliAPP.
-
-## File principali
-
-- `index.html`
-- `style.css`
-- `app.js`
-- `manifest.json`
-- `sw.js`
-- `icons/`
+È una visualizzazione didattica/artistica, non un solver fisico professionale.

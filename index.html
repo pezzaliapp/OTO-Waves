@@ -3,69 +3,69 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-  <meta name="theme-color" content="#020611" />
-  <title>OTO Waves — Electromagnetic Lab</title>
+  <meta name="theme-color" content="#000000" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <title>OTO Waves v3 — Dipole Radiation</title>
   <link rel="manifest" href="manifest.json" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div id="app">
-    <header class="hero">
-      <div class="eyebrow">OTO by PezzaliAPP</div>
-      <h1>Electromagnetic Waves</h1>
-      <p>Dipole Radiation Lab</p>
+  <div class="app">
+    <header class="topbar">
+      <div class="brand">OTO <span>by PezzaliAPP</span></div>
+      <div class="status"><span class="dot"></span> realtime field</div>
     </header>
 
-    <section class="formula-card glass">
-      <div class="formula cyan">E⃗ ∝ <span>1/r</span> cos(kr − ωt) k̂</div>
-      <div class="formula yellow">B⃗ ∝ <span>1/r</span> cos(kr − ωt) φ̂</div>
-      <div class="formula magenta">S⃗ = <span>1/μ₀</span> (E⃗ × B⃗)</div>
+    <section class="hero">
+      <p class="kicker">La matematica che si guarda</p>
+      <h1>Electromagnetic Waves</h1>
+      <p class="subtitle">Dipole Radiation Lab</p>
     </section>
 
-    <main class="stage-wrap">
-      <canvas id="fieldCanvas"></canvas>
-      <div class="center-axis"></div>
-      <div class="charge charge-top"></div>
-      <div class="charge charge-bottom"></div>
-      <div class="ring ring-a"></div>
-      <div class="ring ring-b"></div>
+    <section class="formula">
+      <div><b class="cyan">E</b><span>∝ 1/r · cos(kr − ωt)</span></div>
+      <div><b class="gold">B</b><span>∝ 1/r · cos(kr − ωt)</span></div>
+      <div><b class="violet">S</b><span>= 1/μ₀ · (E × B)</span></div>
+    </section>
+
+    <main class="stage">
+      <canvas id="canvas"></canvas>
+      <div class="dipole">
+        <div class="axis"></div>
+        <div class="charge positive"></div>
+        <div class="charge negative"></div>
+      </div>
     </main>
 
-    <section class="control-panel glass">
+    <section class="panel">
       <div>
-        <h2>PARAMETRI</h2>
-        <p>t = <span id="timeValue">0.00</span></p>
+        <small>TIME</small>
+        <strong id="time">0.00</strong>
       </div>
       <div>
-        <h2>CAMPO (r=3)</h2>
-        <p class="cyan">Eᶻ = <span id="eValue">0.00</span></p>
-        <p class="yellow">Bᵩ = <span id="bValue">0.00</span></p>
+        <small>FIELD</small>
+        <strong><span class="cyan">E</span> <span id="e">+0.00</span></strong>
       </div>
       <div>
-        <h2>ENERGÍA</h2>
-        <p class="magenta">|S| ∝ <span id="sValue">0.000</span></p>
+        <small>MAGNETIC</small>
+        <strong><span class="gold">B</span> <span id="b">+0.00</span></strong>
+      </div>
+      <div>
+        <small>ENERGY</small>
+        <strong><span class="violet">S</span> <span id="s">0.000</span></strong>
       </div>
     </section>
 
-    <section class="buttons">
-      <button id="toggleBtn">Pausa</button>
-      <button id="resetBtn">Reset</button>
-      <label>
-        Velocità
-        <input id="speedRange" type="range" min="0.2" max="2.5" step="0.1" value="1">
-      </label>
-      <label>
-        Ampiezza
-        <input id="ampRange" type="range" min="35" max="110" step="1" value="72">
-      </label>
+    <section class="controls">
+      <button id="play">Pausa</button>
+      <button id="reset">Reset</button>
+      <label>Velocità <input id="speed" type="range" min="0.25" max="2" step="0.05" value="0.75"></label>
+      <label>Ampiezza <input id="amp" type="range" min="35" max="95" step="1" value="62"></label>
     </section>
 
-    <footer class="oto-footer">
-      <strong>OTO</strong>
-      <span>Una nuova forma alle idee. Physics, code, visual thinking.</span>
-    </footer>
+    <footer>OTO Waves v3 PRO · visual physics PWA · offline ready</footer>
   </div>
-
   <script src="app.js"></script>
 </body>
 </html>
