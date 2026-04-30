@@ -3,7 +3,7 @@
 }
 
 :root {
-  --bg: #020611;
+  --bg: #03040a;
   --panel: rgba(3, 15, 32, 0.72);
   --cyan: #20d8ff;
   --yellow: #ffd538;
@@ -237,4 +237,32 @@ input {
   .control-panel { grid-template-columns: 1fr 1fr 1fr; gap: 8px; padding: 14px 10px; }
   .buttons { grid-template-columns: 1fr 1fr; }
   .ring { width: 92vw; height: 30vw; }
+}
+
+
+.oto-footer {
+  margin-top: 22px;
+  padding: 18px 12px 4px;
+  text-align: center;
+  color: var(--muted);
+  letter-spacing: .02em;
+}
+
+.oto-footer strong {
+  display: block;
+  color: var(--cyan);
+  font-size: 1.35rem;
+  letter-spacing: .22em;
+  margin-bottom: 4px;
+  text-shadow: 0 0 18px rgba(32,216,255,.45);
+}
+
+.oto-footer span {
+  font-size: .92rem;
+}
+
+@media (display-mode: standalone) {
+  .hero {
+    padding-top: 18px;
+  }
 }

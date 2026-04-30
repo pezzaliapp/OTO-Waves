@@ -1,12 +1,12 @@
 {
-  "name": "Dipole Radiation Lab",
-  "short_name": "DipoleLab",
-  "description": "PWA didattica per visualizzare la radiazione di un dipolo elettromagnetico.",
+  "name": "OTO Waves \u2014 Electromagnetic Lab",
+  "short_name": "OTO Waves",
+  "description": "PWA OTO by PezzaliAPP: visualizzazione interattiva della radiazione di un dipolo elettromagnetico.",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
-  "background_color": "#020611",
-  "theme_color": "#020611",
+  "background_color": "#03040a",
+  "theme_color": "#03040a",
   "icons": [
     {
       "src": "icons/icon-192.png",

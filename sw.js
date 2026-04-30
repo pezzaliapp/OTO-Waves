@@ -1,4 +1,4 @@
-const CACHE_NAME = "dipole-radiation-lab-v1";
+const CACHE_NAME = "oto-waves-v1";
 const ASSETS = [
   "./",
   "./index.html",
