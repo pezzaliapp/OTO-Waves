@@ -13,9 +13,12 @@
     <header class="header">
       <div>
         <strong>OTO Dipole Lab</strong>
-        <span>Laboratory visualization · far-field approximation</span>
+        <span>by Alessandro Pezzali · PezzaliAPP</span>
       </div>
-      <button id="playBtn">Pause</button>
+      <div class="header-actions">
+        <button id="aboutBtn">Che cosa fa</button>
+        <button id="playBtn">Pause</button>
+      </div>
     </header>
 
     <main class="layout">
@@ -55,10 +58,32 @@
         </section>
 
         <section class="note">
-          Didactic simulator. Not a FEM/FDTD electromagnetic solver.
+          © 2026 Alessandro Pezzali · PezzaliAPP. Visualizzazione didattica, non un solver FEM/FDTD professionale.
         </section>
       </aside>
     </main>
+  </div>
+
+  <div class="modal open" id="aboutModal" role="dialog" aria-modal="true" aria-labelledby="aboutTitle">
+    <div class="modal-card">
+      <button class="modal-close" id="closeModal" aria-label="Chiudi">×</button>
+      <p class="modal-brand">OTO · PezzaliAPP</p>
+      <h2 id="aboutTitle">Che cosa visualizza questa app</h2>
+      <p>
+        Questa PWA serve a <strong>visualizzare e capire in modo intuitivo la radiazione elettromagnetica di un dipolo</strong>:
+        uno dei meccanismi fondamentali con cui nasce la luce e, più in generale, tutte le onde elettromagnetiche.
+      </p>
+      <p>
+        Le due cariche oscillanti generano un <strong>campo elettrico Eθ</strong> e un
+        <strong>campo magnetico Bφ</strong>. Il flusso di energia viene mostrato dai vettori radiali
+        <strong>S</strong>, mentre i lobi indicano che la radiazione è massima lateralmente e minima lungo l’asse del dipolo.
+      </p>
+      <p class="modal-note">
+        È una visualizzazione didattica in approssimazione di campo lontano: non sostituisce software FEM/FDTD professionali.
+      </p>
+      <div class="modal-copy">© 2026 Alessandro Pezzali · PezzaliAPP</div>
+      <button class="modal-primary" id="startBtn">Apri il laboratorio</button>
+    </div>
   </div>
 
   <script src="app.js"></script>

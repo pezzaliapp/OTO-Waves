@@ -1,7 +1,7 @@
 {
-  "name": "OTO Dipole Lab",
+  "name": "OTO Dipole Lab \u2014 Alessandro Pezzali",
   "short_name": "Dipole Lab",
-  "description": "Laboratory-style dipole radiation visualization PWA.",
+  "description": "PWA didattica PezzaliAPP di Alessandro Pezzali per visualizzare la radiazione elettromagnetica di un dipolo.",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",

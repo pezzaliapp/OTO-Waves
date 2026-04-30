@@ -9,6 +9,10 @@ const omegaOut=document.getElementById("omegaOut");
 const sOut=document.getElementById("sOut");
 const playBtn=document.getElementById("playBtn");
 const resetBtn=document.getElementById("resetBtn");
+const aboutBtn=document.getElementById("aboutBtn");
+const aboutModal=document.getElementById("aboutModal");
+const closeModal=document.getElementById("closeModal");
+const startBtn=document.getElementById("startBtn");
 
 let W=0,H=0,DPR=1,t=0,last=performance.now(),running=true;
 
@@ -176,3 +180,8 @@ playBtn.onclick=()=>{running=!running;playBtn.textContent=running?"Pause":"Run"}
 resetBtn.onclick=()=>{t=0};
 if("serviceWorker"in navigator){addEventListener("load",()=>navigator.serviceWorker.register("./sw.js"))}
 requestAnimationFrame(frame);
+
+aboutBtn.onclick=()=>aboutModal.classList.add("open");
+closeModal.onclick=()=>aboutModal.classList.remove("open");
+startBtn.onclick=()=>aboutModal.classList.remove("open");
+aboutModal.addEventListener("click",(e)=>{if(e.target===aboutModal)aboutModal.classList.remove("open")});
